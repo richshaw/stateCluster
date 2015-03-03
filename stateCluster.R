@@ -46,3 +46,11 @@ row.names(data[k$clust==clust[4],])
 # [1] "Alabama"        "AriNAona"       "Arkansas"       "Georgia"        "Indiana"        "Kentucky"      
 # [7] "Louisiana"      "Michigan"       "Mississippi"    "Missouri"       "New Mexico"     "North Carolina"
 # [13] "Ohio"           "Oklahoma"       "Pennsylvania"   "South Carolina" "Tennessee"      "West Virginia" 
+
+clusplot(comp, k$cluster, color=TRUE, shade=TRUE, 
+         labels=2, lines=0)
+
+boxplot(data$Bachelor.s.degree.or.higher..percent.of.persons.age.25.years...2009.2013 ~ k$cluster,
+        xlab='Cluster', ylab='Accommodation',
+        main='Batchelor Degree or Higher by Cluster')
+
