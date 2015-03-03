@@ -3,7 +3,12 @@
 data <- read.csv(file="censusStateClean.csv", header=T, sep=",", row.names=1)
 # Scale data because using different units
 data2 <- data.frame(scale(data))
+# data3 <- data[,-c(1)]
+# data2 <- data.frame(scale(data3))
 # Run PCA
+pc <- princomp(data2)
+loadings(pc)
+
 pc <- prcomp(data2)
 # Choose number of principal compnets that account for > 85% of variance or underneath elbow
 plot(pc, type='l')
